@@ -16,12 +16,10 @@ class Rover {
 
     for (let i = 0; i < message.commands.length; i++) {
       let command = message.commands[i];
-      // var result = processCommand(command)
-      // results.push(result)
+      
 
       if (command.commandType === "MOVE" && typeof command.value === "number") {
         if (this.mode === "LOW_POWER") {
-         // return ({completed: false})
           response.results.push({ completed: false });
           continue;
         }
